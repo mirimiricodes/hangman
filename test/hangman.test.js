@@ -13,5 +13,13 @@ describe("Hangman", () => {
         let usedLetters = hangman.getUsedLetters()
         expect(usedLetters).includes("s")
     })
+    it("should store guessed letters", () => {
+        hangman.setWordToGuess("tomato")
+        hangman.guessLetter("t")
+        hangman.guessLetter("x")
+        let guessedLetters = hangman.getGuessedLetters()
+        expect(guessedLetters).includes("t")
+
+    })
 
 })
