@@ -1,5 +1,6 @@
-let wordToGuess
+let wordToGuess = ""
 let usedLetters = []
+let guessedLetters = []
 
 function setWordToGuess(word) {
     wordToGuess = word
@@ -11,10 +12,16 @@ function getWordLength() {
 }
 function guessLetter(letter) {
     usedLetters.push(letter)
+    if (wordToGuess.includes(letter)) {
+        guessedLetters.push(letter)
+    }
 }
 
 function getUsedLetters() {
     return usedLetters
+}
+function getGuessedLetters() {
+    return guessedLetters
 }
 
 export default {
@@ -22,5 +29,6 @@ export default {
     getWordLength,
     guessLetter,
     getUsedLetters,
+    getGuessedLetters,
 
 }
