@@ -1,6 +1,7 @@
 let wordToGuess = ""
 let usedLetters = []
 let guessedLetters = []
+let wrongGuesses = 0
 
 function setWordToGuess(word) {
     wordToGuess = word
@@ -15,13 +16,33 @@ function guessLetter(letter) {
     if (wordToGuess.includes(letter)) {
         guessedLetters.push(letter)
     }
+    else {
+        wrongGuesses++
+    }
 }
 
 function getUsedLetters() {
     return usedLetters
 }
+
 function getGuessedLetters() {
     return guessedLetters
+}
+
+function isGameOver() {
+    console.log(wrongGuesses)
+    if (wrongGuesses == 7) {
+        return true
+    }
+    else {
+        return false
+    }
+}
+function resetGame() {
+    wordToGuess = ""
+    usedLetters = []
+    guessedLetters = []
+    wrongGuesses = 0
 }
 
 export default {
@@ -30,5 +51,7 @@ export default {
     guessLetter,
     getUsedLetters,
     getGuessedLetters,
+    isGameOver,
+    resetGame,
 
 }
