@@ -30,7 +30,6 @@ function getGuessedLetters() {
 }
 
 function isGameOver() {
-    console.log(wrongGuesses)
     if (wrongGuesses == 7) {
         return true
     }
