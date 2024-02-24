@@ -7,13 +7,13 @@ describe("Hangman", () => {
         let wordLength = hangman.getWordLength()
         expect(wordLength).to.be.equal(6)
     })
-    it("should store letters used so far", () => {
+    it("should detect letters used so far", () => {
         hangman.setWordToGuess("tomato")
         hangman.guessLetter("s")
         let usedLetters = hangman.getUsedLetters()
         expect(usedLetters).includes("s")
     })
-    it("should store guessed letters", () => {
+    it("should detect good guesses", () => {
         hangman.setWordToGuess("tomato")
         hangman.guessLetter("t")
         hangman.guessLetter("x")
