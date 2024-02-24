@@ -41,4 +41,16 @@ describe("Hangman", () => {
         expect(hangman.isGameOver()).to.be.equal(false)
 
     })
+
+    it("should not count turn if the letter has already been guessed", () => {
+        hangman.setWordToGuess("tomato")
+        hangman.guessLetter("s")
+        hangman.guessLetter("n")
+        hangman.guessLetter("x")
+        hangman.guessLetter("y")
+        hangman.guessLetter("p")
+        hangman.guessLetter("b")
+        hangman.guessLetter("t")
+        expect(hangman.isGameOver()).to.be.equal(false)
+    })
 })
