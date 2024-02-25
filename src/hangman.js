@@ -30,13 +30,19 @@ function getGuessedLetters() {
 }
 
 function isGameOver() {
-    if (wrongGuesses == 7) {
-        return true
-    }
-    else {
-        return false
-    }
+    return wrongGuesses == 7
+        || isGameWon() == true
 }
+
+function isGameWon() {
+    for (const letter of wordToGuess) {
+        if (!guessedLetters.includes(letter)) {
+            return false
+        }
+    }
+    return true
+}
+
 function resetGame() {
     wordToGuess = ""
     usedLetters = []
@@ -51,6 +57,7 @@ export default {
     getUsedLetters,
     getGuessedLetters,
     isGameOver,
+    isGameWon,
     resetGame,
 
 }

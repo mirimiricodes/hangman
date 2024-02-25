@@ -53,4 +53,13 @@ describe("Hangman", () => {
         hangman.guessLetter("t")
         expect(hangman.isGameOver()).to.be.equal(false)
     })
+    it("should win if the word is guessed", () => {
+        hangman.setWordToGuess("tomato")
+        hangman.guessLetter("t")
+        hangman.guessLetter("o")
+        hangman.guessLetter("m")
+        hangman.guessLetter("a")
+        expect(hangman.isGameOver()).to.be.equal(true)
+        expect(hangman.isGameWon()).to.be.equal(true)
+    })
 })
