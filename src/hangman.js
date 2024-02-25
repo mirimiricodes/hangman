@@ -11,6 +11,20 @@ function getWordLength() {
     return wordToGuess.length
 
 }
+function isALetter(letter) {
+    let regex = /^[a-zA-Z]+$/;
+    return regex.test(letter)
+
+}
+
+function safeGuessLetter(letter) {
+    if (isALetter(letter)) {
+        guessLetter(letter)
+    }
+    else {
+        return "Invalid character"
+    }
+}
 function guessLetter(letter) {
     usedLetters.push(letter)
     if (wordToGuess.includes(letter)) {
@@ -53,7 +67,7 @@ function resetGame() {
 export default {
     setWordToGuess,
     getWordLength,
-    guessLetter,
+    guessLetter: safeGuessLetter,
     getUsedLetters,
     getGuessedLetters,
     isGameOver,
