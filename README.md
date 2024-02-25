@@ -1,7 +1,7 @@
 # hangman
 ## Requirements: 
 - [x] The player guesses a letter in each turn. 
-- [ ] The player wins if they guess the word. 
+- [x] The player wins if they guess the word. 
 - [x] The player loses if they don't guess the word in 7 turns. 
 - [ ] The word to guess is chosen randomly from a list of words stored in a .txt file, separated by a comma.
 - [ ] The player can restart the game after the game is over.
