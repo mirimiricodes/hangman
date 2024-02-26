@@ -62,4 +62,13 @@ describe("Hangman", () => {
         expect(hangman.isGameOver()).to.be.equal(true)
         expect(hangman.isGameWon()).to.be.equal(true)
     })
+    it("should not allow invalid character: number", () => {
+        expect(hangman.guessLetter(4)).to.be.equal("Invalid character")
+    })
+    it("should not allow invalid character: ?", () => {
+        expect(hangman.guessLetter("?")).to.be.equal("Invalid character")
+    })
+    it("should not allow invalid character: ab", () => {
+        expect(hangman.guessLetter("ab")).to.be.equal("Invalid character")
+    })
 })
