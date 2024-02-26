@@ -8,3 +8,11 @@
 - [x] The game warns the player if a letter has already been guessed, and it doesn't count as a turn.
 - [x] The used letters are displayed to the player.
 - [x] If the player does not introduce a letter, an error message will be displayed.
+
+## Dictionary Requirements: 
+- [ ] Provides a random word.
+- [ ] The word collection doesn't include duplicates.
+- [ ] The word collection is saved in a .txt file. 
+```
+bird, carrot, sea
+```
