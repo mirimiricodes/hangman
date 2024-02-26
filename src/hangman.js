@@ -11,10 +11,10 @@ function getWordLength() {
     return wordToGuess.length
 
 }
+
 function isALetter(letter) {
     let regex = /^[a-zA-Z]+$/;
-    return regex.test(letter)
-
+    return regex.test(letter) && letter.length == 1
 }
 
 function safeGuessLetter(letter) {
