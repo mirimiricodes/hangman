@@ -7,4 +7,4 @@
 - [ ] The player can restart the game after the game is over.
 - [x] The game warns the player if a letter has already been guessed, and it doesn't count as a turn.
 - [x] The used letters are displayed to the player.
-- [ ] If the player does not introduce a letter, an error message will be displayed.
+- [x] If the player does not introduce a letter, an error message will be displayed.
