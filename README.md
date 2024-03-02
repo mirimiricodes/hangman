@@ -16,3 +16,45 @@
 ```
 bird, carrot, sea
 ```
+
+## UI prototype:
+```
+Welcome to Mirimiri's hangman!
+Press any key to start a new game.
+```
+
+```
+Guess the word!
+_ _ _ _
+
+You already used these letters: 
+
+Turns left: 7
+```
+
+```
+Guess the word!
+_ _ R _
+
+You already used these letters: 
+A, D, R, Z
+
+Turns left: 4
+```
+
+```
+Congratulations! You guessed the word!
+The word was: BIRD
+
+Press any key to play again.
+```
+
+```
+I'm sorry, you didn't guess the word!
+The word was: BIRD
+
+Press any key to play again.
+```
+
+
+
