@@ -5,6 +5,10 @@ describe("Hangman", () => {
     afterEach(() => {
         hangman.resetGame()
     })
+    it("should initialize the game", () => {
+        hangman.initialize()
+        expect(hangman.getWordLength()).to.be.greaterThan(0)
+    })
     it("should return the number of characters the word has", () => {
         hangman.setWordToGuess("tomato")
         let wordLength = hangman.getWordLength()

@@ -1,7 +1,13 @@
+import dictionary from "./dictionary.js"
+
 let wordToGuess = ""
 let usedLetters = []
 let guessedLetters = []
 let wrongGuesses = 0
+
+function initialize() {
+    setWordToGuess(dictionary.pickRandomWord())
+}
 
 function setWordToGuess(word) {
     wordToGuess = word
@@ -62,9 +68,11 @@ function resetGame() {
     usedLetters = []
     guessedLetters = []
     wrongGuesses = 0
+
 }
 
 export default {
+    initialize,
     setWordToGuess,
     getWordLength,
     guessLetter: safeGuessLetter,
