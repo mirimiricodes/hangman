@@ -1,5 +1,5 @@
 import * as chai from "chai"
-import hangman from "./../src/hangman.js"
+import hangman from "../src/game/hangman.js"
 let expect = chai.expect
 describe("Hangman", () => {
     afterEach(() => {

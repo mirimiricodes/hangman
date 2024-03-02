@@ -1,5 +1,5 @@
 import * as chai from "chai"
-import dictionary from "./../src/dictionary.js"
+import dictionary from "../src/game/dictionary.js"
 let expect = chai.expect
 
 describe("Dictionary", () => {
