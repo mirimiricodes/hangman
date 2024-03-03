@@ -1,0 +1,16 @@
+@startuml
+class Hangman
+interface Dictionary {
+    pickRandomWord()
+}
+class UI
+class TxtDictionary
+class TxtFile
+class DummyDictionary
+
+UI --> Hangman
+Hangman *--> Dictionary
+TxtDictionary -up-|> Dictionary
+TxtDictionary --> TxtFile
+DummyDictionary -up-|> Dictionary
+@enduml
