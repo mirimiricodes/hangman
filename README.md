@@ -1,4 +1,8 @@
 # hangman
+## Design: 
+![design](./out/docs/design/design.png)
+
+
 ## Requirements: 
 - [x] The player guesses a letter in each turn. 
 - [x] The player wins if they guess the word. 
