@@ -10,10 +10,15 @@ function showHiddenWord() {
     let wordLength = hangman.getWordLength()
     let hiddenWord = ""
     for (let i = 0; i < wordLength; i++) {
-        hiddenWord = hiddenWord.concat("_ ")
+        let letter = hangman.getLetterAt(i)
+        if (hangman.wordIncludes(letter)) {
+            hiddenWord = hiddenWord.concat(`${letter.toUpperCase()} `)
+        }
+        else {
+            hiddenWord = hiddenWord.concat("_ ")
+        }
     }
     console.log(hiddenWord)
-
 }
 
 function showUsedLetters() {
@@ -25,7 +30,7 @@ function showTurnsLeft() {
 }
 
 function showGameOver() {
-
+    console.log("Game Over")
 }
 
 function showScreen() {

@@ -10,7 +10,7 @@ function initialize() {
 }
 
 function setWordToGuess(word) {
-    wordToGuess = word
+    wordToGuess = word.toLowerCase()
 }
 
 function getWordLength() {
@@ -32,9 +32,10 @@ function safeGuessLetter(letter) {
     }
 }
 function guessLetter(letter) {
-    usedLetters.push(letter)
-    if (wordToGuess.includes(letter)) {
-        guessedLetters.push(letter)
+    let lowercaseLetter = letter.toLowerCase()
+    usedLetters.push(lowercaseLetter)
+    if (wordToGuess.includes(lowercaseLetter)) {
+        guessedLetters.push(lowercaseLetter)
     }
     else {
         wrongGuesses++
@@ -47,6 +48,14 @@ function getUsedLetters() {
 
 function getGuessedLetters() {
     return guessedLetters
+}
+
+function getLetterAt(i) {
+    return wordToGuess.charAt(i)
+}
+
+function wordIncludes(letter) {
+    return guessedLetters.includes(letter.toLowerCase())
 }
 
 function isGameOver() {
@@ -78,6 +87,8 @@ export default {
     guessLetter: safeGuessLetter,
     getUsedLetters,
     getGuessedLetters,
+    getLetterAt,
+    wordIncludes,
     isGameOver,
     isGameWon,
     resetGame,
