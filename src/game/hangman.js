@@ -25,12 +25,23 @@ function isALetter(letter) {
 
 function safeGuessLetter(letter) {
     if (isALetter(letter)) {
-        guessLetter(letter)
+        return avoidDuplicates(letter)
     }
     else {
         return "Invalid character"
     }
 }
+
+function avoidDuplicates(letter) {
+    let lowercaseLetter = letter.toLowerCase()
+    if (usedLetters.includes(lowercaseLetter)) {
+        return "You already used this letter!"
+    }
+    else {
+        guessLetter(letter)
+    }
+}
+
 function guessLetter(letter) {
     let lowercaseLetter = letter.toLowerCase()
     usedLetters.push(lowercaseLetter)

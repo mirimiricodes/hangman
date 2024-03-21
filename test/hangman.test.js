@@ -75,4 +75,8 @@ describe("Hangman", () => {
     it("should not allow invalid character: ab", () => {
         expect(hangman.guessLetter("ab")).to.be.equal("Invalid character")
     })
+    it("should ignore already used letters", () => {
+        hangman.guessLetter("t")
+        expect(hangman.guessLetter("t")).to.be.equal("You already used this letter!")
+    })
 })
