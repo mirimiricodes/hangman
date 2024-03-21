@@ -2,6 +2,7 @@ import readline from "readline-sync"
 import hangman from "./game/hangman.js"
 
 console.log("Welcome to Mirimiri's hangman!")
+console.log()
 readline.question("Press enter to start a new game.")
 
 hangman.initialize()
@@ -19,9 +20,16 @@ function showHiddenWord() {
         }
     }
     console.log(hiddenWord)
+    console.log()
 }
 
 function showUsedLetters() {
+    let usedLetters = hangman.getUsedLetters()
+    console.log(
+        "You already used these letters: " +
+        usedLetters.join(", ").toUpperCase() +
+        "\n"
+    )
 
 }
 
@@ -34,7 +42,9 @@ function showGameOver() {
 }
 
 function showScreen() {
+    console.log()
     console.log("Guess the word!")
+    console.log()
     showHiddenWord()
     showUsedLetters()
     showTurnsLeft()
